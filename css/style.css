@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background-color: hsl(36, 100%, 99%);
+}
+
+h1 {
+    font-size: 43px;
+    line-height: 1.1;
+}
+
+h2 {
+    color: hsl(35, 77%, 62%);
+    font-weight: 700;   
+    font-size: 30px;
+}
+
+h3 {
+    color: #fff;
+    font-size: 20px;
+    margin: 30px 0px 10px 0px;
+}
+
+h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+h4 {
+    color: hsl(233, 8%, 79%);
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+h5:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+p {
+    color: hsl(236, 13%, 42%);
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 30px;
+    background-color: hsl(5, 85%, 63%);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+    height: 50px;
+    width: 220px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+/* Desktop Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+ul li a {
+    margin: 0 10px;
+    color: hsl(236, 13%, 42%);
+}
+
+ul li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+nav .hamburger {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    z-index: 5;
+    background-color: #fff;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70vw;
+    display: none;
+    animation: FadeIn 0.5s linear;
+}
+
+.mobile-menu ul {
+    margin-top: 120px;
+}
+
+.mobile-menu ul li {
+    margin: 0 0 20px 20px;
+}
+
+.mobile-menu ul li a {
+    font-size: 18px;
+    color: hsl(240, 100%, 5%);
+}
+
+.mobile-menu ul li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+/* Toggle Classes */
+
+/* Main & Sidebar Section */
+section {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+}
+
+.showcase {
+    width: 80%;
+}
+
+.showcase-img {
+    width: 100%;
+    height: 300px;
+    background: url('../images/image-web-3-desktop.jpg') no-repeat center center/cover;
+}
+
+.article-info {
+    display: flex;
+    gap: 80px;
+    margin-top: 25px;
+}
+
+.article-info h1 {
+    width: 40%;
+}
+
+.article-preview {
+    width: 60%;
+}
+
+/* Sidebar */
+.side-bar {
+    background-color: hsl(240, 100%, 5%);
+    padding: 25px;
+    width: 40%;
+}
+
+.side-bar p {
+    color: hsl(233, 8%, 79%);
+    line-height: 1.6;
+}
+
+.divider {
+    margin-top: 30px;
+    width: 100%;
+    background-color: hsl(233, 8%, 79%);
+    padding: 0.1px;
+}
+
+/* Blog Section */
+.blog-section {
+    margin-top: 50px;
+    gap: 15px;
+}
+
+.blog {
+    display: flex;
+    gap: 15px;
+    height: 150px;
+    width: 300px;
+}
+
+.blog:nth-of-type(3) {
+    margin-left: 63px;
+}
+
+.blog img {
+    width: 30%;
+    height: 90%;
+}
+
+/* Animation */
+@keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+/* Tablets & Big Smartphones*/
+@media (max-width: 1100px) {
+    p {
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    h5 {
+        margin: 5px 0;
+    }
+
+    .article-info {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .article-info h1 {
+        font-size: 39px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .article-preview {
+        width: 100%;
+    }
+
+    .article-preview p {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .side-bar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .side-bar p {
+        text-align: center;
+    }
+
+    button {
+        display: block;
+        margin: 30px auto;
+    }
+
+    .blog:nth-of-type(3) {
+        margin-left: 0px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .showcase {
+        width: 100%;
+    }
+
+    .blog-section {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .blog {
+        align-items: center;
+        text-align: left;
+    }
+
+    .blog img {
+        height: 75%;
+    }
+}
+
+/* Small Smartphones */
+@media (max-width: 768px) {
+    .blog-section {
+        flex-direction: column;
+    }
+
+    nav {
+        height: 90px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    .shown {
+        display: block;
+    }
+    
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    
+    .bg-fade {
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+    
+    .bg-image {
+        filter: brightness(50%);
+    }
+
+}
